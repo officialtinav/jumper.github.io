@@ -23,8 +23,10 @@
         this.velocity += this.gravity; //gravity
         this.y += this.velocity;
         this.velocity *= 0.8; //air resistance
-        if (this.y > h) { //hits the floor
-          this.y = h;
+        
+        
+        if (this.y > h-100) { //hits the floor
+          this.y = h-100;
           this.velocity = 0;
         }
         if (this.y < 0) { //hits the ceiling
