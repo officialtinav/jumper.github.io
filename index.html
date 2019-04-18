@@ -1,5 +1,6 @@
 <html>
   <head>
+      <script src="homepage.html"></script>
       <script src="p5.min.js"></script>
       <script src="jumper.js"></script>
       <script src="barrier.js"></script>
@@ -25,6 +26,7 @@
         
         #score {
           font-family: monospace;
+          z-index: 2;
         }
         
         #directions {
@@ -37,7 +39,7 @@
       </style>
   </head>
   <body>
-    
+    <button onclick = "myFunction()">reload page</button>
     <h1 id = "lose"></h1>
     <h2 id = "score"></h2>
     
@@ -49,6 +51,10 @@
     </div>
     
     <script>
+    function myFunction() {
+      location.reload();
+    }
+    
     var w = window.innerWidth;
     var h = window.innerHeight;
     var jumper = new jumper();
@@ -70,6 +76,8 @@
       mySound = loadSound('bobabeach.mp3');
       
       img = loadImage('female.png');
+      bird = loadImage('pinkcandy.png');
+      cherries = loadImage('pinkcandy.png');
     }
     
     function setup() {
@@ -100,9 +108,10 @@
       
       barrier2.show();
       barrier2.update();
+
     /*  barrier2.kill(); */
   
-      image(img, this.x, this.y);
+      
     /*  document.addEventListener('keyup', function(e)) {
         if(e.keycode == 82) //r
         window.location.reload();
@@ -137,8 +146,6 @@
     }
     }
     
-    document.getElementById('directions').innerHTML = "arrow keys - move left and right";
-    document.getElementById('directions2').innerHTML = "spacebar - jump";
     document.getElementById('score').innerHTML = "score: "+ score;
     
    

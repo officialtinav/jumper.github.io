@@ -6,10 +6,11 @@ function barrier() {
       this.velocity = 0; //velocity of player
       
       this.show = function() {
-        fill(color('green'));
-        rect(this.x,this.y,100,200);
+       /* fill(color('green')); */
+        image(bird, this.x, this.y,300,300);
+       /* rect(this.x,this.y,100,200); */
         if (this.x > 0){ // if reached the right edge of the canvas, go back to the left edge
-  	    x = 0;
+        x = 0; 
         }
       }
 
@@ -18,7 +19,7 @@ function barrier() {
          this.x += this.velocity; //position on the y axis
          this.velocity *= 0.2; //air resistance when the ball drops down
          
-         if(this.x< 0 -50) {
+         if(this.x< 0-50) {
            this.y = Math.floor(Math.random()*h-50);
            
            this.velocity = 0; //gravity
@@ -50,8 +51,9 @@ function barrier2() {
        this.velocity= 0; //velocity of player
       
        this.show= function() {
-         fill(color('green'));
-         rect(this.x, this.y, 100, 200);
+        /* fill(color('green')); */
+         image(cherries, this.x, this.y,200,200);
+         /* rect(this.x, this.y, 100, 200); */
          strokeWeight(0);
        }
       
@@ -68,6 +70,7 @@ function barrier2() {
          }
        }
 }
+
 
     
     function keyPressed() {

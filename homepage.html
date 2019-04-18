@@ -1,0 +1,61 @@
+<html>
+  <head>
+    
+       <style>
+        body {
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+          background-image: url("blurdark.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: 0px;
+        }
+        
+       
+        
+        #directions {
+          font-family: monospace;
+          font-size: 30px;
+          color: white;
+          text-align: center;
+        }
+        
+        #directions2 {
+          font-family: monospace;
+          font-size: 30px;
+          color: white;
+          text-align: center;
+        }
+
+        #instructions {
+        font-family: monospace;
+          font-size: 30px;
+          color: white;
+          text-align: center;
+        }
+
+       
+      </style>
+  </head>
+  <body>
+        <p id="instructions">cross to the opposite side of the forest without bumping into the candies</p>
+        <p id="directions">arrow keys: move up, down, left, and right</p>
+        <p id="directions2">space bar: jump</p>
+        
+    <div style="text-align:center">
+     <button onclick="playGame()">click here to play!</button>
+    </div>
+  
+    <script>
+        function playGame() { //jump to next page
+          location.href = "index.html";
+}
+
+function draw() {
+    clear();
+    background("rgba(255,255,255,0)");
+}
+    </script>
+  </body>
+</html>
