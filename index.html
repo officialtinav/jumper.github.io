@@ -39,16 +39,10 @@
       </style>
   </head>
   <body>
-    <button onclick = "myFunction()">reload page</button>
+    <button onclick = "myFunction()">restart</button>
     <h1 id = "lose"></h1>
     <h2 id = "score"></h2>
     
-    <div>
-      <h1 id = "title"></h1>
-      <h2 id = "directions"></h2>
-      <h2 id = "directions2"></h2>
-      <h2 id = "instructions"></h2>
-    </div>
     
     <script>
     function myFunction() {
@@ -75,9 +69,9 @@
       soundFormats('mp3');
       mySound = loadSound('bobabeach.mp3');
       
-      img = loadImage('female.png');
-      bird = loadImage('pinkcandy.png');
-      cherries = loadImage('pinkcandy.png');
+      img = loadImage('girl2.png');
+      candy1 = loadImage('pinkcandy.png');
+      candy2 = loadImage('pinkcandy.png');
     }
     
     function setup() {
@@ -143,6 +137,8 @@
        if((hit == true) || (hit2 == true)) {
       document.getElementById('lose').innerHTML = "you lose";
       noLoop();
+
+     
     }
     }
     

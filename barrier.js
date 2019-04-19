@@ -1,17 +1,15 @@
 function barrier() {
       this.x = w;
-      this.y = 0;
-      this.gravity = -0.9; //the force of gravity
+      this.y = 50;
+      this.gravity = -5; //the force of gravity
       this.lift = -10; //opposing the force of gravity
-      this.velocity = 0; //velocity of player
+      this.velocity = 0; //player velocity
       
       this.show = function() {
        /* fill(color('green')); */
-        image(bird, this.x, this.y,300,300);
+        image(candy1, this.x, this.y,300,300);
        /* rect(this.x,this.y,100,200); */
-        if (this.x > 0){ // if reached the right edge of the canvas, go back to the left edge
-        x = 0; 
-        }
+       
       }
 
        this.update= function() {
@@ -31,11 +29,6 @@ function barrier() {
            score++;
              if((score>5)&&(score<10)){
                
-               /* if(this.x < - 50) {
-                 this.velocity = 0;
-                 this.y = Math.floor(Math.random() * h + 100);
-                 this.x = w + 50;
-               } */
              }
          }
        }
@@ -52,7 +45,7 @@ function barrier2() {
       
        this.show= function() {
         /* fill(color('green')); */
-         image(cherries, this.x, this.y,200,200);
+         image(candy2, this.x, this.y,200,200);
          /* rect(this.x, this.y, 100, 200); */
          strokeWeight(0);
        }
@@ -63,7 +56,7 @@ function barrier2() {
          this.velocity *= 0.8; //air resistance when the ball drops down
          
          if(this.x<5) {
-           this.y = Math.floor(Math.random()*h-50);
+           this.y = Math.floor(Math.random()*h-40);
            this.velocity = 0;
            this.x = w;
            score++;

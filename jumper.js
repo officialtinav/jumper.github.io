@@ -10,7 +10,7 @@
       this.show = function() {
        /* fill(color('red'));
         ellipse(this.x,this.y,50,50); */
-        image(img, this.x, this.y,100,100); //The 100 refers to the width and height
+        image(img, this.x, this.y,110,150); //The 100 refers to the width and height
         //image(characterLeft (variable name), jumper.xx and y position
         
        /* image(girl, this.x,this.y); */
